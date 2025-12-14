@@ -1,6 +1,12 @@
-#@API_URL=http://localhost:8080
-@API_URL={{$dotenv API_URL}}
+# Change the url as needed (e.g. deployed url on Render)
+@API_URL=http://localhost:8080
 
+###
+# Test that the API is responding 
+GET {{API_URL}}
+
+###
+# Use the prediction endpoint, try changing som values!
 POST {{API_URL}}/predict
 Content-Type: application/json
 
